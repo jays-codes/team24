@@ -15,3 +15,4 @@ INSERT INTO Delay (delayId, delayFrom, delayTo, label) VALUES
 (2, 6, 15, '6-15'),
 (3, 15, 1000, '>16');
 
+

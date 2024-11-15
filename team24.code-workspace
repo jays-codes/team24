@@ -16,6 +16,7 @@
 				"database": "streetcardelaydb",
 				"username": "admin"
 			}
-		]
+		],
+		"sqltools.useNodeRuntime": true
 	}
 }
