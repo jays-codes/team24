@@ -4373,9 +4373,6 @@ line_512                             bool
 bound_N                              bool
 bound_S                              bool
 bound_W                              bool
-timeType_midday                      bool
-timeType_morning_peak                bool
-timeType_off_peak                    bool
 holidayType_Canada Day               bool
 holidayType_Christmas Day            bool
 holidayType_Family Day               bool

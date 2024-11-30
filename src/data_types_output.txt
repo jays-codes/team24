@@ -1,5 +1,5 @@
 incident_date                        datetime64[ns]
-incident_time                                object
+incident_time                        datetime64[ns]
 min_delay                                     int64
 min_gap                                       int64
 lineId                                       object
@@ -4380,9 +4380,6 @@ line_512                                       bool
 bound_N                                        bool
 bound_S                                        bool
 bound_W                                        bool
-timeType_midday                                bool
-timeType_morning_peak                          bool
-timeType_off_peak                              bool
 holidayType_Canada Day                         bool
 holidayType_Christmas Day                      bool
 holidayType_Family Day                         bool
