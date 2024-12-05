@@ -4,10 +4,11 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "--- \n",
+    "\n",
     "<center>\n",
     "\n",
-    "# *PREDICTIVE METHOD: RANDOM FOREST CLASSIFIER* \n",
+    "# **PREDICTIVE METHOD:** \n",
+    "# **RANDOM FOREST CLASSIFIER** \n",
     "by: Ly Nguyen\n",
     "\n",
     "<center>"
@@ -15,9 +16,17 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 29,
+   "execution_count": 1,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n"
+     ]
+    }
+   ],
    "source": [
     "# Import necessary libraries for this notebook: \n",
     "\n",
@@ -55,7 +64,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -73,7 +82,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 3,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -96,7 +105,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 5,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -296,7 +305,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
+   "execution_count": 6,
    "metadata": {},
    "outputs": [
     {
@@ -715,7 +724,7 @@
        "                       min_samples_split=5, n_estimators=87, random_state=42)"
       ]
      },
-     "execution_count": 15,
+     "execution_count": 6,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -735,7 +744,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -746,7 +755,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
+   "execution_count": 8,
    "metadata": {},
    "outputs": [
     {
@@ -788,7 +797,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 20,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [
     {
@@ -817,13 +826,84 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 21,
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Convert the 'Feature' column to a list\n",
+    "top_50_features_list = top_50_features['Feature'].tolist()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Ensure the target column is added to the top 50 features\n",
+    "reduced_features = top_50_features_list + ['delayType']\n",
+    "\n",
+    "# Subset the cleaned dataset\n",
+    "df_reduced = df_cleaned[reduced_features]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
     "# Save the top 50 features as a CSV file\n",
     "relative_path = os.path.join(\"..\", \"data\", \"top_50_features.csv\")\n",
-    "top_50_features.to_csv(relative_path, index=False) # Save the top 50 features without the index column\n"
+    "top_50_features.to_csv(relative_path, index=False) # Save the top 50 features without the index column"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Save the reduced dataset for Dimensionality Reduction studies\n",
+    "relative_path = os.path.join(\"..\", \"data\", \"df_reduced.parquet\")\n",
+    "df_reduced.to_parquet('df_reduced.parquet', index=False)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n"
    ]
   },
   {
